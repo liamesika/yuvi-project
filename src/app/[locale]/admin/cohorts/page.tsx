@@ -19,9 +19,18 @@ export default async function CohortsPage({ params }: Props) {
     },
   })
 
+  type CohortData = {
+    id: string
+    name: string
+    startDate: Date
+    isActive: boolean
+    enrollmentCode: string | null
+    _count: { enrollments: number }
+  }
+
   return (
     <CohortsManagement
-      cohorts={cohorts.map((c) => ({
+      cohorts={cohorts.map((c: CohortData) => ({
         id: c.id,
         name: c.name,
         startDate: c.startDate,
