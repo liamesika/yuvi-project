@@ -40,6 +40,22 @@ export default async function AdminPage({ params }: Props) {
     },
   })
 
+  type EnrollmentItem = {
+    id: string
+    track: string
+    createdAt: Date
+    user: { name: string | null; email: string }
+    cohort: { name: string }
+  }
+
+  type SubmissionItem = {
+    id: string
+    status: string
+    submittedAt: Date | null
+    enrollment: { user: { name: string | null } }
+    week: { weekNumber: number }
+  }
+
   return (
     <AdminOverview
       stats={{
@@ -48,7 +64,7 @@ export default async function AdminPage({ params }: Props) {
         totalParticipants,
         pendingSubmissions,
       }}
-      recentEnrollments={recentEnrollments.map((e) => ({
+      recentEnrollments={recentEnrollments.map((e: EnrollmentItem) => ({
         id: e.id,
         userName: e.user.name || 'Unknown',
         userEmail: e.user.email,
@@ -56,7 +72,7 @@ export default async function AdminPage({ params }: Props) {
         track: e.track,
         createdAt: e.createdAt,
       }))}
-      recentSubmissions={recentSubmissions.map((s) => ({
+      recentSubmissions={recentSubmissions.map((s: SubmissionItem) => ({
         id: s.id,
         userName: s.enrollment.user.name || 'Unknown',
         weekNumber: s.week.weekNumber,

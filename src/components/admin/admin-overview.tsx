@@ -22,7 +22,7 @@ interface RecentEnrollment {
   userName: string
   userEmail: string
   cohortName: string
-  track: Track
+  track: string
   createdAt: Date
 }
 
@@ -30,7 +30,7 @@ interface RecentSubmission {
   id: string
   userName: string
   weekNumber: number
-  status: SubmissionStatus
+  status: string
   submittedAt: Date
 }
 
@@ -126,7 +126,7 @@ export function AdminOverview({ stats, recentEnrollments, recentSubmissions }: P
                         <p className="text-sm text-muted-foreground">{enrollment.cohortName}</p>
                       </div>
                       <div className="text-end">
-                        <Badge className={trackColors[enrollment.track]}>
+                        <Badge className={trackColors[enrollment.track as Track]}>
                           {t(`participants.tracks.${enrollment.track.toLowerCase()}`)}
                         </Badge>
                         <p className="text-xs text-muted-foreground mt-1">
