@@ -1,0 +1,722 @@
+{
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "add": "Add",
+    "close": "Close",
+    "submit": "Submit",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "search": "Search",
+    "filter": "Filter",
+    "noResults": "No results found",
+    "confirm": "Confirm",
+    "yes": "Yes",
+    "no": "No",
+    "or": "or",
+    "and": "and",
+    "all": "All",
+    "none": "None",
+    "required": "Required",
+    "optional": "Optional",
+    "download": "Download",
+    "upload": "Upload",
+    "view": "View",
+    "learnMore": "Learn more",
+    "getStarted": "Get Started"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "pricing": "Pricing",
+    "demo": "Demo",
+    "process": "Process",
+    "login": "Login",
+    "logout": "Logout",
+    "register": "Register",
+    "dashboard": "Dashboard",
+    "profile": "Profile",
+    "settings": "Settings",
+    "admin": "Admin",
+    "cohorts": "Cohorts",
+    "participants": "Participants",
+    "startCourse": "Start Course",
+    "joinCohort": "Join Cohort"
+  },
+  "home": {
+    "hero": {
+      "title": "Take Control of Your Business",
+      "subtitle": "A practical 4-week course that helps you build a real control system for your business",
+      "cta": {
+        "primary": "Start Now",
+        "secondary": "Watch Demo"
+      }
+    },
+    "socialProof": {
+      "title": "What Participants Say",
+      "testimonials": {
+        "1": {
+          "quote": "This course changed the way I manage my business. Finally, I have a clear picture.",
+          "author": "Daniel Cohen",
+          "role": "CEO, Daniel Technologies"
+        },
+        "2": {
+          "quote": "The methodology is simple to implement and brings immediate results. Highly recommend.",
+          "author": "Ronit Levy",
+          "role": "Owner, Design Studio"
+        },
+        "3": {
+          "quote": "For the first time, I have real tools to track the important numbers in my business.",
+          "author": "Yossi Barak",
+          "role": "Founder, Business Consulting"
+        }
+      }
+    },
+    "features": {
+      "title": "What You'll Get",
+      "subtitle": "All the tools and knowledge you need to control your business",
+      "items": {
+        "1": {
+          "title": "Ready Templates",
+          "description": "Get practical templates for immediate implementation in your business"
+        },
+        "2": {
+          "title": "Weekly Tracking",
+          "description": "A weekly tracking system that ensures continuous progress"
+        },
+        "3": {
+          "title": "Professional Support",
+          "description": "Personal guidance throughout the journey (Premium track)"
+        },
+        "4": {
+          "title": "Supportive Community",
+          "description": "Access to a community of business owners in a similar process"
+        },
+        "5": {
+          "title": "Updated Content",
+          "description": "Up-to-date learning materials relevant to the market"
+        },
+        "6": {
+          "title": "Lifetime Access",
+          "description": "Access to materials and updates even after course completion"
+        }
+      }
+    },
+    "process": {
+      "title": "How It Works",
+      "subtitle": "A simple and clear process that leads to results",
+      "steps": {
+        "1": {
+          "title": "Registration",
+          "description": "Choose your track and join the upcoming cohort"
+        },
+        "2": {
+          "title": "Weekly Work",
+          "description": "Each week you'll receive tasks and exercises to implement"
+        },
+        "3": {
+          "title": "Submission & Feedback",
+          "description": "Submit your work and receive professional feedback"
+        },
+        "4": {
+          "title": "Progress",
+          "description": "Track your progress and celebrate achievements"
+        }
+      },
+      "viewFull": "View Full Process"
+    },
+    "pricing": {
+      "title": "Choose Your Track",
+      "subtitle": "Three tracks tailored to different needs",
+      "viewAll": "View All Tracks & Details"
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "questions": {
+        "1": {
+          "question": "How long is the course?",
+          "answer": "The course lasts 4 weeks. Each week you'll receive learning materials and tasks that require about 3-5 hours of work."
+        },
+        "2": {
+          "question": "Can I start whenever I want?",
+          "answer": "The course runs in cohorts. A new cohort opens each month. In the self-paced track, you can start anytime."
+        },
+        "3": {
+          "question": "What happens if I don't submit on time?",
+          "answer": "We understand that life happens. You can submit late, but the submission will be marked as late. In the mentored tracks, we can discuss and adjust."
+        },
+        "4": {
+          "question": "Is there a money-back guarantee?",
+          "answer": "Yes! If you're not satisfied within 7 days of starting the course, we'll refund you in full, no questions asked."
+        },
+        "5": {
+          "question": "Who is this course for?",
+          "answer": "The course is suitable for small and medium business owners who want better control of their business, understand the numbers, and make informed decisions."
+        }
+      }
+    },
+    "cta": {
+      "title": "Ready to Start?",
+      "subtitle": "Join hundreds of business owners already using the system",
+      "button": "Start Now"
+    }
+  },
+  "about": {
+    "hero": {
+      "title": "Our Story",
+      "subtitle": "Why we created the Business Control System"
+    },
+    "mission": {
+      "title": "Our Mission",
+      "description": "To help business owners gain real control over their business, stop working in the business and start working on the business."
+    },
+    "problem": {
+      "title": "The Problem",
+      "description": "Most small and medium business owners work hard but don't really know where they stand. They don't have a clear picture of the numbers, no tracking system, and no tools for making informed decisions."
+    },
+    "solution": {
+      "title": "The Solution",
+      "description": "We developed a simple and practical methodology that any business owner can implement. In four weeks, you'll build a custom control system for your business."
+    },
+    "method": {
+      "title": "The Methodology",
+      "pillars": {
+        "1": {
+          "title": "Measurement",
+          "description": "Identifying and defining the most important metrics for your business"
+        },
+        "2": {
+          "title": "Tracking",
+          "description": "Building a simple and efficient tracking system"
+        },
+        "3": {
+          "title": "Analysis",
+          "description": "Learning how to read data and draw conclusions"
+        },
+        "4": {
+          "title": "Action",
+          "description": "Making data-driven decisions and immediate implementation"
+        }
+      }
+    },
+    "outcomes": {
+      "title": "The Results",
+      "items": {
+        "1": "Clear picture of business status",
+        "2": "Ability to identify problems before they become crises",
+        "3": "Data-driven decisions, not gut feelings",
+        "4": "More accurate future planning",
+        "5": "Peace of mind and sense of control"
+      }
+    }
+  },
+  "pricing": {
+    "hero": {
+      "title": "Pricing & Tracks",
+      "subtitle": "Choose the track that's right for you"
+    },
+    "toggle": {
+      "monthly": "Monthly Payment",
+      "oneTime": "One-Time Payment"
+    },
+    "tiers": {
+      "self": {
+        "name": "Self-Paced",
+        "description": "For those who want to learn at their own pace",
+        "price": {
+          "monthly": "49",
+          "oneTime": "149"
+        },
+        "features": {
+          "1": "Access to all course content",
+          "2": "Downloadable templates",
+          "3": "Community access",
+          "4": "Lifetime updates"
+        },
+        "cta": "Start Now"
+      },
+      "group": {
+        "name": "Group",
+        "description": "For those who want to learn with others and get feedback",
+        "price": {
+          "monthly": "99",
+          "oneTime": "299"
+        },
+        "features": {
+          "1": "Everything in Self-Paced",
+          "2": "Weekly Zoom meetings",
+          "3": "Feedback on submissions",
+          "4": "Active WhatsApp group"
+        },
+        "cta": "Join Group",
+        "popular": "Most Popular"
+      },
+      "premium": {
+        "name": "Premium",
+        "description": "One-on-one personal mentoring",
+        "price": {
+          "monthly": "199",
+          "oneTime": "599"
+        },
+        "features": {
+          "1": "Everything in Group",
+          "2": "4 personal calls",
+          "3": "Close WhatsApp support",
+          "4": "Custom business adaptation"
+        },
+        "cta": "Schedule Call"
+      }
+    },
+    "currency": "$",
+    "perMonth": "per month",
+    "comparison": {
+      "title": "Compare Tracks",
+      "features": {
+        "content": "Content access",
+        "templates": "Downloadable templates",
+        "community": "Community access",
+        "updates": "Lifetime updates",
+        "weeklyMeetings": "Weekly Zoom meetings",
+        "feedback": "Submission feedback",
+        "whatsapp": "WhatsApp group",
+        "personalCalls": "Personal calls",
+        "privateSupport": "Private support",
+        "customization": "Custom adaptation"
+      }
+    },
+    "notes": {
+      "title": "Important Information",
+      "items": {
+        "1": "All prices include applicable taxes",
+        "2": "Upgrade your track at any time",
+        "3": "Cancel monthly payment anytime"
+      }
+    },
+    "refund": {
+      "title": "Money-Back Guarantee",
+      "description": "If you're not satisfied within 7 days of starting the course, we'll refund you in full. No questions, no conditions."
+    }
+  },
+  "demo": {
+    "hero": {
+      "title": "Watch Demo",
+      "subtitle": "See exactly what you'll get in the system"
+    },
+    "video": {
+      "title": "System Tour",
+      "description": "Watch a full demonstration of the dashboard and tools you'll receive"
+    },
+    "screenshots": {
+      "title": "System Screenshots",
+      "items": {
+        "1": {
+          "title": "Dashboard",
+          "description": "Overview of progress and tasks"
+        },
+        "2": {
+          "title": "Week Page",
+          "description": "Content, tasks, and submissions"
+        },
+        "3": {
+          "title": "Admin Management",
+          "description": "Track participants"
+        }
+      }
+    },
+    "cta": {
+      "title": "Like What You See?",
+      "button": "Start Now"
+    }
+  },
+  "process": {
+    "hero": {
+      "title": "The Full Process",
+      "subtitle": "What awaits you in the course, step by step"
+    },
+    "overview": {
+      "title": "Overview",
+      "description": "The course consists of 4 intensive weeks. Each week focuses on a different topic and contains learning materials, practical exercises, and assignments to submit."
+    },
+    "steps": {
+      "enrollment": {
+        "title": "Step 1: Registration",
+        "description": "Choose a track and join a cohort",
+        "details": {
+          "1": "Choose suitable track",
+          "2": "Payment and confirmation",
+          "3": "Get system access",
+          "4": "Prepare for first week"
+        }
+      },
+      "weeklyWork": {
+        "title": "Step 2: Weekly Work",
+        "description": "Learn and implement each week",
+        "details": {
+          "1": "Watch learning materials",
+          "2": "Complete exercises",
+          "3": "Fill out task checklist",
+          "4": "Work with templates"
+        }
+      },
+      "submission": {
+        "title": "Step 3: Submission & Tracking",
+        "description": "Submit work and get feedback",
+        "details": {
+          "1": "Submit weekly assignment",
+          "2": "Upload relevant files",
+          "3": "Receive feedback (mentored tracks)",
+          "4": "Revisions and improvements"
+        }
+      },
+      "checkin": {
+        "title": "Step 4: Weekly Check-in",
+        "description": "Meeting and progress tracking",
+        "details": {
+          "1": "Share progress with group",
+          "2": "Q&A session",
+          "3": "Learn from others",
+          "4": "Prepare for next week"
+        }
+      },
+      "completion": {
+        "title": "Step 5: Completion & Action Plan",
+        "description": "Course summary and continuation plan",
+        "details": {
+          "1": "Achievement summary",
+          "2": "Build monthly plan",
+          "3": "Set future goals",
+          "4": "Continued access to materials and community"
+        }
+      }
+    },
+    "weeks": {
+      "title": "Weekly Content",
+      "week1": {
+        "title": "Week 1: Mapping the Situation",
+        "topics": {
+          "1": "Defining business goals",
+          "2": "Identifying important metrics",
+          "3": "Mapping current state",
+          "4": "Setting starting point"
+        }
+      },
+      "week2": {
+        "title": "Week 2: Building the System",
+        "topics": {
+          "1": "Choosing tracking tools",
+          "2": "Setting up personal dashboard",
+          "3": "Defining data collection processes",
+          "4": "Simple automations"
+        }
+      },
+      "week3": {
+        "title": "Week 3: Analysis & Understanding",
+        "topics": {
+          "1": "Reading data",
+          "2": "Identifying trends",
+          "3": "Finding opportunities",
+          "4": "Identifying problems"
+        }
+      },
+      "week4": {
+        "title": "Week 4: Action & Planning",
+        "topics": {
+          "1": "Data-driven decision making",
+          "2": "Building action plan",
+          "3": "Setting monthly goals",
+          "4": "Ongoing maintenance"
+        }
+      }
+    },
+    "cta": {
+      "title": "Ready to Start the Process?",
+      "button": "Choose a Track & Start"
+    }
+  },
+  "auth": {
+    "login": {
+      "title": "Login",
+      "subtitle": "Welcome back to the system",
+      "email": "Email",
+      "password": "Password",
+      "submit": "Login",
+      "forgotPassword": "Forgot password",
+      "noAccount": "Don't have an account?",
+      "register": "Register now",
+      "errors": {
+        "invalid": "Invalid email or password",
+        "required": "Please fill in all fields"
+      }
+    },
+    "register": {
+      "title": "Register",
+      "subtitle": "Create a new account",
+      "name": "Full Name",
+      "email": "Email",
+      "password": "Password",
+      "confirmPassword": "Confirm Password",
+      "submit": "Register",
+      "hasAccount": "Already have an account?",
+      "login": "Login",
+      "errors": {
+        "emailExists": "Email address already exists",
+        "passwordMismatch": "Passwords don't match",
+        "weakPassword": "Password is too weak",
+        "required": "Please fill in all fields"
+      }
+    },
+    "join": {
+      "title": "Join Cohort",
+      "subtitle": "Enter the enrollment code you received",
+      "code": "Enrollment Code",
+      "submit": "Join",
+      "errors": {
+        "invalidCode": "Invalid code",
+        "cohortFull": "Cohort is full",
+        "alreadyEnrolled": "You're already enrolled in this cohort"
+      }
+    }
+  },
+  "dashboard": {
+    "welcome": "Hello, {name}",
+    "cohort": {
+      "title": "Your Cohort",
+      "progress": "Overall Progress",
+      "nextAction": "Next Action"
+    },
+    "weeks": {
+      "title": "Your Weeks",
+      "week": "Week {number}",
+      "deadline": "Deadline",
+      "status": {
+        "notStarted": "Not Started",
+        "inProgress": "In Progress",
+        "submitted": "Submitted",
+        "completed": "Completed",
+        "late": "Late"
+      },
+      "actions": {
+        "start": "Start",
+        "continue": "Continue",
+        "view": "View Submission"
+      }
+    },
+    "submissions": {
+      "title": "Recent Submissions",
+      "empty": "No submissions yet",
+      "viewAll": "View All Submissions"
+    }
+  },
+  "week": {
+    "title": "Week {number}",
+    "content": {
+      "title": "Week Content"
+    },
+    "video": {
+      "title": "Video"
+    },
+    "checklist": {
+      "title": "Checklist",
+      "progress": "{completed} of {total} completed",
+      "required": "Required"
+    },
+    "assets": {
+      "title": "Downloads",
+      "download": "Download"
+    },
+    "submission": {
+      "title": "Submission",
+      "textAnswer": {
+        "label": "Written Answer",
+        "placeholder": "Write your answer here..."
+      },
+      "files": {
+        "title": "Files",
+        "upload": "Upload Files",
+        "dragDrop": "Drag files here or click to select",
+        "maxSize": "Max size: 10MB per file"
+      },
+      "submit": "Submit",
+      "update": "Update Submission",
+      "deadline": "Deadline",
+      "lateWarning": "Note: Submission after deadline will be marked as late",
+      "submitted": "Submitted on {date}",
+      "status": "Status"
+    }
+  },
+  "submissions": {
+    "title": "My Submissions",
+    "empty": "No submissions yet",
+    "table": {
+      "week": "Week",
+      "status": "Status",
+      "submittedAt": "Submitted At",
+      "actions": "Actions"
+    }
+  },
+  "profile": {
+    "title": "My Profile",
+    "personalInfo": {
+      "title": "Personal Information",
+      "name": "Name",
+      "email": "Email"
+    },
+    "preferences": {
+      "title": "Preferences",
+      "language": "Language",
+      "languageDescription": "Choose your preferred interface language"
+    },
+    "save": "Save Changes"
+  },
+  "admin": {
+    "overview": {
+      "title": "Overview",
+      "stats": {
+        "totalCohorts": "Cohorts",
+        "activeCohorts": "Active Cohorts",
+        "totalParticipants": "Participants",
+        "pendingSubmissions": "Pending Submissions"
+      }
+    },
+    "cohorts": {
+      "title": "Manage Cohorts",
+      "create": "Create New Cohort",
+      "edit": "Edit Cohort",
+      "table": {
+        "name": "Name",
+        "startDate": "Start Date",
+        "participants": "Participants",
+        "status": "Status",
+        "actions": "Actions"
+      },
+      "form": {
+        "name": "Cohort Name",
+        "startDate": "Start Date",
+        "capacity": "Capacity (optional)",
+        "enrollmentCode": "Enrollment Code",
+        "isActive": "Active Cohort"
+      },
+      "status": {
+        "active": "Active",
+        "inactive": "Inactive"
+      }
+    },
+    "weeks": {
+      "title": "Manage Weeks",
+      "edit": "Edit Week",
+      "form": {
+        "title": "Title",
+        "description": "Description",
+        "videoUrl": "Video URL",
+        "deadline": "Deadline"
+      },
+      "checklist": {
+        "title": "Checklist",
+        "add": "Add Item",
+        "itemTitle": "Item Description",
+        "isRequired": "Required"
+      },
+      "assets": {
+        "title": "Assets",
+        "add": "Add Asset",
+        "assetTitle": "File Name",
+        "type": "Type",
+        "upload": "Upload File",
+        "types": {
+          "template": "Template",
+          "report": "Report",
+          "other": "Other"
+        }
+      }
+    },
+    "participants": {
+      "title": "Manage Participants",
+      "table": {
+        "name": "Name",
+        "email": "Email",
+        "track": "Track",
+        "week1": "W1",
+        "week2": "W2",
+        "week3": "W3",
+        "week4": "W4",
+        "lastActivity": "Last Activity",
+        "status": "Status",
+        "actions": "Actions"
+      },
+      "filters": {
+        "week": "Week",
+        "status": "Status",
+        "track": "Track",
+        "search": "Search by name or email"
+      },
+      "tracks": {
+        "self": "Self-Paced",
+        "group": "Group",
+        "premium": "Premium"
+      },
+      "detail": {
+        "title": "Participant Details",
+        "submissions": "Submissions",
+        "checklist": "Checklist",
+        "notes": "Admin Notes",
+        "addNote": "Add Note",
+        "markCompleted": "Mark as Completed",
+        "viewFiles": "View Files"
+      }
+    }
+  },
+  "footer": {
+    "brand": {
+      "name": "Business Control",
+      "description": "A system for managing and controlling your business"
+    },
+    "pages": {
+      "title": "Pages",
+      "about": "About",
+      "pricing": "Pricing",
+      "demo": "Demo",
+      "process": "Process"
+    },
+    "legal": {
+      "title": "Legal",
+      "terms": "Terms of Service",
+      "privacy": "Privacy Policy",
+      "refund": "Refund Policy"
+    },
+    "contact": {
+      "title": "Contact",
+      "email": "info@businesscontrol.com",
+      "whatsapp": "WhatsApp"
+    },
+    "copyright": "All rights reserved"
+  },
+  "errors": {
+    "notFound": {
+      "title": "Page Not Found",
+      "description": "Sorry, the page you're looking for doesn't exist",
+      "action": "Back to Home"
+    },
+    "unauthorized": {
+      "title": "Access Denied",
+      "description": "You don't have permission to view this content",
+      "action": "Back to Home"
+    },
+    "serverError": {
+      "title": "Server Error",
+      "description": "Something went wrong. Please try again later",
+      "action": "Try Again"
+    }
+  },
+  "empty": {
+    "noData": "No data to display",
+    "noCohorts": "No cohorts",
+    "noParticipants": "No participants",
+    "noSubmissions": "No submissions"
+  }
+}

@@ -1,0 +1,208 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+enum Role {
+  ADMIN
+  STUDENT
+}
+
+enum Track {
+  SELF
+  GROUP
+  PREMIUM
+}
+
+enum SubmissionStatus {
+  NOT_STARTED
+  IN_PROGRESS
+  SUBMITTED
+  COMPLETED
+  LATE
+}
+
+enum AssetType {
+  TEMPLATE
+  REPORT
+  OTHER
+}
+
+model User {
+  id              String       @id @default(cuid())
+  name            String?
+  email           String       @unique
+  emailVerified   DateTime?
+  image           String?
+  passwordHash    String?
+  role            Role         @default(STUDENT)
+  preferredLocale String       @default("he")
+  createdAt       DateTime     @default(now())
+  updatedAt       DateTime     @updatedAt
+  accounts        Account[]
+  sessions        Session[]
+  enrollments     Enrollment[]
+}
+
+model Account {
+  userId            String
+  type              String
+  provider          String
+  providerAccountId String
+  refresh_token     String?
+  access_token      String?
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String?
+  session_state     String?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@id([provider, providerAccountId])
+}
+
+model Session {
+  sessionToken String   @unique
+  userId       String
+  expires      DateTime
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model VerificationToken {
+  identifier String
+  token      String
+  expires    DateTime
+
+  @@id([identifier, token])
+}
+
+model Cohort {
+  id             String       @id @default(cuid())
+  name           String
+  startDate      DateTime
+  isActive       Boolean      @default(true)
+  capacity       Int?
+  enrollmentCode String?      @unique
+  createdAt      DateTime     @default(now())
+  updatedAt      DateTime     @updatedAt
+  weeks          Week[]
+  enrollments    Enrollment[]
+}
+
+model Enrollment {
+  id                 String              @id @default(cuid())
+  userId             String
+  cohortId           String
+  track              Track               @default(SELF)
+  createdAt          DateTime            @default(now())
+  updatedAt          DateTime            @updatedAt
+  user               User                @relation(fields: [userId], references: [id], onDelete: Cascade)
+  cohort             Cohort              @relation(fields: [cohortId], references: [id], onDelete: Cascade)
+  submissions        Submission[]
+  checklistProgress  ChecklistProgress[]
+  adminNotes         AdminNote[]
+
+  @@unique([userId, cohortId])
+}
+
+model Week {
+  id          String          @id @default(cuid())
+  cohortId    String
+  weekNumber  Int
+  title       String
+  description String          @db.Text
+  videoUrl    String?
+  deadline    DateTime?
+  createdAt   DateTime        @default(now())
+  updatedAt   DateTime        @updatedAt
+  cohort      Cohort          @relation(fields: [cohortId], references: [id], onDelete: Cascade)
+  checklist   ChecklistItem[]
+  assets      Asset[]
+  submissions Submission[]
+  adminNotes  AdminNote[]
+
+  @@unique([cohortId, weekNumber])
+}
+
+model ChecklistItem {
+  id         String              @id @default(cuid())
+  weekId     String
+  title      String
+  order      Int
+  isRequired Boolean             @default(false)
+  createdAt  DateTime            @default(now())
+  updatedAt  DateTime            @updatedAt
+  week       Week                @relation(fields: [weekId], references: [id], onDelete: Cascade)
+  progress   ChecklistProgress[]
+}
+
+model ChecklistProgress {
+  id              String        @id @default(cuid())
+  enrollmentId    String
+  checklistItemId String
+  isDone          Boolean       @default(false)
+  updatedAt       DateTime      @updatedAt
+  enrollment      Enrollment    @relation(fields: [enrollmentId], references: [id], onDelete: Cascade)
+  checklistItem   ChecklistItem @relation(fields: [checklistItemId], references: [id], onDelete: Cascade)
+
+  @@unique([enrollmentId, checklistItemId])
+}
+
+model Asset {
+  id        String    @id @default(cuid())
+  weekId    String
+  title     String
+  fileUrl   String
+  type      AssetType @default(OTHER)
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+  week      Week      @relation(fields: [weekId], references: [id], onDelete: Cascade)
+}
+
+model Submission {
+  id           String           @id @default(cuid())
+  enrollmentId String
+  weekId       String
+  status       SubmissionStatus @default(NOT_STARTED)
+  textAnswer   String?          @db.Text
+  submittedAt  DateTime?
+  createdAt    DateTime         @default(now())
+  updatedAt    DateTime         @updatedAt
+  enrollment   Enrollment       @relation(fields: [enrollmentId], references: [id], onDelete: Cascade)
+  week         Week             @relation(fields: [weekId], references: [id], onDelete: Cascade)
+  files        SubmissionFile[]
+
+  @@unique([enrollmentId, weekId])
+}
+
+model SubmissionFile {
+  id           String     @id @default(cuid())
+  submissionId String
+  fileUrl      String
+  fileName     String
+  fileType     String
+  size         Int
+  createdAt    DateTime   @default(now())
+  submission   Submission @relation(fields: [submissionId], references: [id], onDelete: Cascade)
+}
+
+model AdminNote {
+  id           String     @id @default(cuid())
+  enrollmentId String
+  weekId       String?
+  content      String     @db.Text
+  createdAt    DateTime   @default(now())
+  updatedAt    DateTime   @updatedAt
+  enrollment   Enrollment @relation(fields: [enrollmentId], references: [id], onDelete: Cascade)
+  week         Week?      @relation(fields: [weekId], references: [id], onDelete: SetNull)
+}

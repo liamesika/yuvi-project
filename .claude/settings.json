@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "additionalDirectories": [
+      "/Users/liamesika/Desktop/yuvi/src/app/[locale]"
+    ],
+    "allow": [
+      "Bash(find:*)"
+    ]
+  }
+}
