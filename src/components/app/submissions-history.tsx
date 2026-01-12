@@ -8,7 +8,7 @@ import { Badge } from '@/components/ui/badge'
 import { FadeIn } from '@/components/motion'
 import { formatDate, formatFileSize } from '@/lib/utils'
 import { ArrowRight, FileText, Download, CheckCircle, Clock, AlertTriangle } from 'lucide-react'
-import { SubmissionStatus } from '@prisma/client'
+import { SubmissionStatus } from '@/types/enums'
 
 interface SubmissionFile {
   id: string

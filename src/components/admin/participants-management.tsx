@@ -16,15 +16,15 @@ import {
 import { FadeIn } from '@/components/motion'
 import { formatRelativeTime } from '@/lib/utils'
 import { ArrowLeft, Search, Eye } from 'lucide-react'
-import { Track, SubmissionStatus } from '@prisma/client'
 import { useState } from 'react'
+import { Track, SubmissionStatus } from '@/types/enums'
 
 interface Participant {
   enrollmentId: string
   userId: string
   name: string
   email: string
-  track: Track
+  track: Track | string
   weekStatuses: string[]
   lastActivity: Date
 }
@@ -188,7 +188,7 @@ export function ParticipantsManagement({ cohortId, cohortName, participants, fil
                         <td className="p-4 font-medium">{participant.name}</td>
                         <td className="p-4 text-muted-foreground">{participant.email}</td>
                         <td className="p-4 text-center">
-                          <Badge className={trackColors[participant.track]}>
+                          <Badge className={trackColors[participant.track as Track]}>
                             {t(`tracks.${participant.track.toLowerCase()}`)}
                           </Badge>
                         </td>

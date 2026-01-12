@@ -9,7 +9,7 @@ import { Progress } from '@/components/ui/progress'
 import { FadeIn, StaggerChildren, StaggerItem } from '@/components/motion'
 import { formatDate } from '@/lib/utils'
 import { ArrowRight, Calendar, CheckCircle, Clock, AlertCircle } from 'lucide-react'
-import { SubmissionStatus } from '@prisma/client'
+import { SubmissionStatus } from '@/types/enums'
 
 interface WeekData {
   weekNumber: number

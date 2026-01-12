@@ -41,15 +41,24 @@ export default async function ParticipantsPage({ params, searchParams }: Props) 
     notFound()
   }
 
-  const participants = cohort.enrollments.map((enrollment) => {
+  type EnrollmentData = {
+    id: string
+    track: string
+    createdAt: Date
+    user: { id: string; name: string | null; email: string }
+    submissions: Array<{ status: string; submittedAt: Date | null; week: { weekNumber: number } }>
+    checklistProgress: Array<{ id: string }>
+  }
+
+  const participants = cohort.enrollments.map((enrollment: EnrollmentData) => {
     const weekStatuses = [1, 2, 3, 4].map((weekNum) => {
-      const submission = enrollment.submissions.find((s) => s.week.weekNumber === weekNum)
+      const submission = enrollment.submissions.find((s: { week: { weekNumber: number } }) => s.week.weekNumber === weekNum)
       return submission?.status || 'NOT_STARTED'
     })
 
     const lastSubmission = enrollment.submissions
-      .filter((s) => s.submittedAt)
-      .sort((a, b) => new Date(b.submittedAt!).getTime() - new Date(a.submittedAt!).getTime())[0]
+      .filter((s: { submittedAt: Date | null }) => s.submittedAt)
+      .sort((a: { submittedAt: Date | null }, b: { submittedAt: Date | null }) => new Date(b.submittedAt!).getTime() - new Date(a.submittedAt!).getTime())[0]
 
     return {
       enrollmentId: enrollment.id,

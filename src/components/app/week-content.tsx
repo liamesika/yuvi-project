@@ -23,7 +23,7 @@ import {
   Clock,
   X,
 } from 'lucide-react'
-import { SubmissionStatus, AssetType } from '@prisma/client'
+import { SubmissionStatus, AssetType } from '@/types/enums'
 
 interface ChecklistItem {
   id: string

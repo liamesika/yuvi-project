@@ -8,7 +8,7 @@ import { Badge } from '@/components/ui/badge'
 import { FadeIn, StaggerChildren, StaggerItem } from '@/components/motion'
 import { formatRelativeTime } from '@/lib/utils'
 import { Users, BookOpen, FileCheck, Clock, ArrowRight } from 'lucide-react'
-import { Track, SubmissionStatus } from '@prisma/client'
+import { Track, SubmissionStatus } from '@/types/enums'
 
 interface Stats {
   totalCohorts: number

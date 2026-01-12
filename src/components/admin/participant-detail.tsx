@@ -22,7 +22,7 @@ import {
   AlertTriangle,
   Plus,
 } from 'lucide-react'
-import { Track, SubmissionStatus } from '@prisma/client'
+import { Track, SubmissionStatus } from '@/types/enums'
 
 interface SubmissionFile {
   id: string
@@ -34,7 +34,7 @@ interface SubmissionFile {
 
 interface Submission {
   id: string
-  status: SubmissionStatus
+  status: string
   textAnswer: string | null
   submittedAt: Date | null
   files: SubmissionFile[]
@@ -61,7 +61,7 @@ interface Props {
     enrollmentId: string
     name: string
     email: string
-    track: Track
+    track: string
     joinedAt: Date
   }
   weeks: WeekData[]
@@ -153,7 +153,7 @@ export function ParticipantDetail({ cohortId, cohortName, participant, weeks, no
                   <span className="font-semibold text-lg text-foreground">
                     {participant.name}
                   </span>
-                  <Badge className={trackColors[participant.track]}>
+                  <Badge className={trackColors[participant.track as Track]}>
                     {participant.track}
                   </Badge>
                 </div>
@@ -179,7 +179,7 @@ export function ParticipantDetail({ cohortId, cohortName, participant, weeks, no
           </CardHeader>
           <CardContent className="space-y-4">
             {weeks.map((week) => {
-              const status = week.submission?.status || 'NOT_STARTED'
+              const status = (week.submission?.status || 'NOT_STARTED') as SubmissionStatus
               const { variant, icon: StatusIcon } = statusConfig[status]
 
               return (
