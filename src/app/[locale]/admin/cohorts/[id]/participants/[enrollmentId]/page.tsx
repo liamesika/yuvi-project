@@ -76,7 +76,7 @@ export default async function ParticipantDetailPage({ params }: Props) {
         joinedAt: enrollment.createdAt,
       }}
       weeks={weeksData}
-      notes={enrollment.adminNotes.map((note) => ({
+      notes={enrollment.adminNotes.map((note: { id: string; content: string; week: { weekNumber: number } | null; createdAt: Date }) => ({
         id: note.id,
         content: note.content,
         weekNumber: note.week?.weekNumber || null,
