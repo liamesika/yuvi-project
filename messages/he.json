@@ -481,6 +481,21 @@
         "cohortFull": "המחזור מלא",
         "alreadyEnrolled": "את/ה כבר רשום/ה למחזור זה"
       }
+    },
+    "forgotPassword": {
+      "title": "שכחתי סיסמה",
+      "description": "הזינו את כתובת האימייל שלכם ונשלח לכם קישור לאיפוס הסיסמה",
+      "email": "אימייל",
+      "emailPlaceholder": "example@email.com",
+      "submit": "שלח קישור",
+      "sending": "שולח...",
+      "backToLogin": "חזרה להתחברות",
+      "success": {
+        "title": "הקישור נשלח!",
+        "description": "אם קיים חשבון עם האימייל הזה, ישלח אליו קישור לאיפוס הסיסמה",
+        "checkSpam": "לא קיבלתם? בדקו בתיקיית הספאם",
+        "backToLogin": "חזרה להתחברות"
+      }
     }
   },
   "dashboard": {
