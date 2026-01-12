@@ -25,7 +25,7 @@ export default async function AppLayout({ children }: { children: React.ReactNod
   let progress = 0
   if (enrollment) {
     const completedWeeks = enrollment.submissions.filter(
-      (s) => s.status === 'COMPLETED' || s.status === 'SUBMITTED'
+      (s: { status: string }) => s.status === 'COMPLETED' || s.status === 'SUBMITTED'
     ).length
     progress = Math.round((completedWeeks / 4) * 100)
   }
