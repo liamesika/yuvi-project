@@ -718,5 +718,116 @@
     "noCohorts": "No cohorts",
     "noParticipants": "No participants",
     "noSubmissions": "No submissions"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "We'd love to hear from you",
+    "email": {
+      "title": "Email"
+    },
+    "whatsapp": {
+      "title": "WhatsApp",
+      "link": "Send a message"
+    },
+    "location": {
+      "title": "Location",
+      "address": "Tel Aviv, Israel"
+    }
+  },
+  "legal": {
+    "terms": {
+      "title": "Terms of Service",
+      "lastUpdated": "Last updated: January 2024",
+      "sections": {
+        "acceptance": {
+          "title": "Acceptance of Terms",
+          "content": "By accessing and using this website, you agree to these terms of service. If you do not agree to these terms, please refrain from using the site."
+        },
+        "services": {
+          "title": "Our Services",
+          "content": "We provide online courses and business management tools. Services include access to content, templates, and professional guidance according to the selected track."
+        },
+        "accounts": {
+          "title": "User Accounts",
+          "content": "You are responsible for maintaining the confidentiality of your account credentials and for all activity that occurs under your account."
+        },
+        "payment": {
+          "title": "Payments",
+          "content": "Payment for courses is made in advance. All prices shown include VAT. Payment can be made by credit card or bank transfer."
+        },
+        "intellectual": {
+          "title": "Intellectual Property",
+          "content": "All content on this website, including text, graphics, logos, images and videos, are protected by copyright and belong to us or our licensors."
+        },
+        "termination": {
+          "title": "Termination",
+          "content": "We reserve the right to suspend or terminate your access to the services at any time, without prior notice, in case of violation of these terms of use."
+        },
+        "contact": {
+          "title": "Contact",
+          "content": "For questions regarding these terms of service, please contact us at: info@businesscontrol.com"
+        }
+      }
+    },
+    "privacy": {
+      "title": "Privacy Policy",
+      "lastUpdated": "Last updated: January 2024",
+      "sections": {
+        "collection": {
+          "title": "Information Collection",
+          "content": "We collect information that you provide directly to us, such as name, email address and payment details when registering for courses."
+        },
+        "usage": {
+          "title": "Use of Information",
+          "content": "We use the collected information to provide and improve services, process payments, send updates and communicate with you."
+        },
+        "sharing": {
+          "title": "Information Sharing",
+          "content": "We do not sell, rent or share your personal information with third parties for marketing purposes without your consent."
+        },
+        "security": {
+          "title": "Information Security",
+          "content": "We take reasonable security measures to protect your personal information from unauthorized access, modification or destruction."
+        },
+        "cookies": {
+          "title": "Cookies",
+          "content": "Our website uses cookies to improve user experience. You can manage your cookie preferences through your browser settings."
+        },
+        "rights": {
+          "title": "Your Rights",
+          "content": "You have the right to access your personal information, correct it or request its deletion. Contact us to exercise these rights."
+        },
+        "contact": {
+          "title": "Contact",
+          "content": "For questions regarding this privacy policy, please contact us at: info@businesscontrol.com"
+        }
+      }
+    },
+    "refund": {
+      "title": "Refund Policy",
+      "lastUpdated": "Last updated: January 2024",
+      "sections": {
+        "guarantee": {
+          "title": "Satisfaction Guarantee",
+          "content": "We offer a 7-day money-back guarantee. If you're not satisfied with the course, we'll refund you in full, no questions asked."
+        },
+        "eligibility": {
+          "title": "Refund Eligibility",
+          "content": "To be eligible for a refund, you must submit a request within 7 days of the purchase date. Refunds will be made to the original payment method."
+        },
+        "process": {
+          "title": "Refund Process",
+          "content": "To request a refund, send an email to info@businesscontrol.com with your order details. We will process your request within 3-5 business days."
+        },
+        "exceptions": {
+          "title": "Exceptions",
+          "content": "Refunds are not available after the 7-day period or for digital products that have already been fully downloaded."
+        },
+        "contact": {
+          "title": "Contact",
+          "content": "For questions regarding refunds, please contact us at: info@businesscontrol.com"
+        }
+      }
+    }
   }
 }
