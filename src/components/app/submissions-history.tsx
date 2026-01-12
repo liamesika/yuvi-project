@@ -22,7 +22,7 @@ interface Submission {
   id: string
   weekNumber: number
   weekTitle: string
-  status: SubmissionStatus
+  status: string
   textAnswer: string | null
   submittedAt: Date | null
   files: SubmissionFile[]
@@ -67,7 +67,7 @@ export function SubmissionsHistory({ submissions }: Props) {
       ) : (
         <div className="space-y-4">
           {submissions.map((submission, index) => {
-            const { variant, icon: StatusIcon } = statusConfig[submission.status]
+            const { variant, icon: StatusIcon } = statusConfig[submission.status as SubmissionStatus]
             return (
               <FadeIn key={submission.id} delay={index * 0.1}>
                 <Card>

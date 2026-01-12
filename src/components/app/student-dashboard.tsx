@@ -15,13 +15,13 @@ interface WeekData {
   weekNumber: number
   title: string
   deadline: Date | null
-  status: SubmissionStatus
+  status: string
   checklistProgress: number
 }
 
 interface SubmissionData {
   weekNumber: number
-  status: SubmissionStatus
+  status: string
   submittedAt: Date | null
 }
 
@@ -136,7 +136,7 @@ export function StudentDashboard({
 
         <StaggerChildren className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {weeks.map((week) => {
-            const { variant, icon: Icon } = statusConfig[week.status]
+            const { variant, icon: Icon } = statusConfig[week.status as SubmissionStatus]
             return (
               <StaggerItem key={week.weekNumber}>
                 <Link href={`/app/week/${week.weekNumber}`}>
@@ -195,7 +195,7 @@ export function StudentDashboard({
             ) : (
               <div className="space-y-4">
                 {recentSubmissions.map((submission) => {
-                  const { variant, icon: Icon } = statusConfig[submission.status]
+                  const { variant, icon: Icon } = statusConfig[submission.status as SubmissionStatus]
                   return (
                     <div
                       key={submission.weekNumber}

@@ -35,9 +35,18 @@ export default async function SubmissionsPage({ params }: Props) {
     redirect('/join')
   }
 
+  type SubmissionData = {
+    id: string
+    status: string
+    textAnswer: string | null
+    submittedAt: Date | null
+    week: { weekNumber: number; title: string }
+    files: Array<{ id: string; fileName: string; fileUrl: string; fileType: string; size: number }>
+  }
+
   return (
     <SubmissionsHistory
-      submissions={enrollment.submissions.map((s) => ({
+      submissions={enrollment.submissions.map((s: SubmissionData) => ({
         id: s.id,
         weekNumber: s.week.weekNumber,
         weekTitle: s.week.title,

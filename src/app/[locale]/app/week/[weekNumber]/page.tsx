@@ -65,10 +65,13 @@ export default async function WeekPage({ params }: Props) {
 
   const submission = enrollment.submissions[0]
 
-  const checklistWithProgress = week.checklist.map((item) => ({
+  type ChecklistItem = { id: string; title: string; order: number; isRequired: boolean }
+  type ChecklistProgress = { checklistItemId: string; isDone: boolean }
+
+  const checklistWithProgress = week.checklist.map((item: ChecklistItem) => ({
     ...item,
     isDone: enrollment.checklistProgress.some(
-      (cp) => cp.checklistItemId === item.id && cp.isDone
+      (cp: ChecklistProgress) => cp.checklistItemId === item.id && cp.isDone
     ),
   }))
 

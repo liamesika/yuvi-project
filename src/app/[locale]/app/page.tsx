@@ -45,12 +45,31 @@ export default async function AppPage({ params }: Props) {
     redirect('/join')
   }
 
+  // Types for Prisma query results
+  type WeekData = {
+    id: string
+    weekNumber: number
+    title: string
+    deadline: Date | null
+    checklist: Array<{ id: string }>
+  }
+  type SubmissionData = {
+    weekId: string
+    status: string
+    submittedAt: Date | null
+    week: { weekNumber: number }
+  }
+  type ChecklistProgressData = {
+    checklistItemId: string
+    isDone: boolean
+  }
+
   // Transform data for the dashboard
-  const weekData = enrollment.cohort.weeks.map((week) => {
-    const submission = enrollment.submissions.find((s) => s.weekId === week.id)
+  const weekData = enrollment.cohort.weeks.map((week: WeekData) => {
+    const submission = enrollment.submissions.find((s: SubmissionData) => s.weekId === week.id)
     const checklistItems = week.checklist.length
     const completedItems = enrollment.checklistProgress.filter(
-      (cp) => week.checklist.some((ci) => ci.id === cp.checklistItemId) && cp.isDone
+      (cp: ChecklistProgressData) => week.checklist.some((ci: { id: string }) => ci.id === cp.checklistItemId) && cp.isDone
     ).length
 
     return {
@@ -62,7 +81,7 @@ export default async function AppPage({ params }: Props) {
     }
   })
 
-  const totalProgress = weekData.reduce((acc, w) => {
+  const totalProgress = weekData.reduce((acc: number, w: { status: string; checklistProgress: number }) => {
     if (w.status === 'COMPLETED') return acc + 25
     if (w.status === 'SUBMITTED') return acc + 20
     if (w.status === 'IN_PROGRESS') return acc + w.checklistProgress * 0.25
@@ -75,7 +94,7 @@ export default async function AppPage({ params }: Props) {
       cohortName={enrollment.cohort.name}
       weeks={weekData}
       overallProgress={Math.round(totalProgress)}
-      recentSubmissions={enrollment.submissions.slice(0, 3).map((s) => ({
+      recentSubmissions={enrollment.submissions.slice(0, 3).map((s: SubmissionData) => ({
         weekNumber: s.week.weekNumber,
         status: s.status,
         submittedAt: s.submittedAt,
