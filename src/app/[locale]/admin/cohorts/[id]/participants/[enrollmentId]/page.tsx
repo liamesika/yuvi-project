@@ -2,14 +2,10 @@ import { notFound } from 'next/navigation'
 import { setRequestLocale } from 'next-intl/server'
 import { prisma } from '@/lib/db'
 import { ParticipantDetail } from '@/components/admin/participant-detail'
-import type { Week, ChecklistItem, Submission, SubmissionFile, ChecklistProgress } from '@prisma/client'
 
 interface Props {
   params: Promise<{ locale: string; id: string; enrollmentId: string }>
 }
-
-type WeekWithChecklist = Week & { checklist: ChecklistItem[] }
-type SubmissionWithDetails = Submission & { week: Week; files: SubmissionFile[] }
 
 export default async function ParticipantDetailPage({ params }: Props) {
   const { locale, id: cohortId, enrollmentId } = await params
@@ -45,11 +41,11 @@ export default async function ParticipantDetailPage({ params }: Props) {
     notFound()
   }
 
-  const weeksData = enrollment.cohort.weeks.map((week: WeekWithChecklist) => {
-    const submission = enrollment.submissions.find((s: SubmissionWithDetails) => s.weekId === week.id)
+  const weeksData = enrollment.cohort.weeks.map((week: { id: string; weekNumber: number; title: string; checklist: { id: string }[] }) => {
+    const submission = enrollment.submissions.find((s: { weekId: string }) => s.weekId === week.id)
     const checklistItems = week.checklist.length
     const completedItems = enrollment.checklistProgress.filter(
-      (cp: ChecklistProgress) => week.checklist.some((ci: ChecklistItem) => ci.id === cp.checklistItemId) && cp.isDone
+      (cp: { checklistItemId: string; isDone: boolean }) => week.checklist.some((ci: { id: string }) => ci.id === cp.checklistItemId) && cp.isDone
     ).length
 
     return {
